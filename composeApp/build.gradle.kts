@@ -69,6 +69,8 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation(libs.androidx.material.icons.extended)
+            implementation(libs.koalaplot.core)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
