@@ -1,4 +1,4 @@
-package com.lead.nevertell
+package com.lead.nevertell.components.verticalbar
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme

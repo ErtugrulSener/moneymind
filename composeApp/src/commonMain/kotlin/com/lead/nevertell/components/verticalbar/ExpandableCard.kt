@@ -1,4 +1,4 @@
-package com.lead.nevertell
+package com.lead.nevertell.components.verticalbar
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing
