@@ -52,19 +52,19 @@ fun barChartEntries(): List<VerticalBarPlotEntry<Float, Float>> {
     }
 }
 
-interface SampleView {
+interface View {
     val name: String
     val thumbnail: @Composable () -> Unit
     val content: @Composable () -> Unit
 }
 
 @OptIn(ExperimentalKoalaPlotApi::class)
-val verticalBarSampleView = object : SampleView {
+val verticalBarView = object : View {
     override val name: String = "Vertical Bar"
 
     override val thumbnail = @Composable {
         ThumbnailTheme {
-            BarSamplePlot(true, TickPositionState(TickPosition.None, TickPosition.None), name)
+            BarPlot(true, TickPositionState(TickPosition.None, TickPosition.None), name)
         }
     }
 
@@ -82,7 +82,7 @@ val verticalBarSampleView = object : SampleView {
             ChartLayout(
                 modifier = Modifier.sizeIn(minHeight = 200.dp, maxHeight = 600.dp).weight(1f)
             ) {
-                BarSamplePlot(false, tickPositionState, "Fibonacci Sequence")
+                BarPlot(false, tickPositionState, "Fibonacci Sequence")
             }
             HorizontalDivider(modifier = Modifier.fillMaxWidth())
             TickPositionSelector(tickPositionState) {
@@ -97,7 +97,7 @@ val XAxisRange = 0.5f..8.5f
 
 @OptIn(ExperimentalKoalaPlotApi::class)
 @Composable
-fun BarSamplePlot(
+fun BarPlot(
     thumbnail: Boolean = false,
     tickPositionState: TickPositionState,
     title: String

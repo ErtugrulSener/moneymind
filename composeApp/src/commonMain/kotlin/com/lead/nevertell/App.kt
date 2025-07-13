@@ -7,7 +7,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.lead.nevertell.components.verticalbar.BarSamplePlot
+import com.lead.nevertell.components.verticalbar.BarPlot
 import com.lead.nevertell.components.verticalbar.TickPositionState
 import io.github.koalaplot.core.xygraph.TickPosition
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -22,7 +22,7 @@ fun App() {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            BarSamplePlot(
+            BarPlot(
                 thumbnail = false,
                 tickPositionState = TickPositionState(TickPosition.None, TickPosition.None),
                 title = "moneymind"
